@@ -1,0 +1,8 @@
+export { AboutSection } from './AboutSection'
+export { ContactSection } from './ContactSection'
+export { EducationSection } from './EducationSection'
+export { EvolutionSection } from './EvolutionSection'
+export { Experience } from './Experience'
+export { FocusSection } from './FocusSection'
+export { HeroSection } from './HeroSection'
+export { SkillsGrid } from './SkillsGrid'
