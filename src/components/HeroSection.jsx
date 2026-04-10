@@ -6,6 +6,7 @@ export function HeroSection({ copy, profileConfig }) {
   const [shareOpen, setShareOpen] = useState(false)
   const [copied, setCopied] = useState(false)
   const shareRef = useRef(null)
+  const baseUrl = import.meta.env.BASE_URL
   const currentUrl = typeof window !== 'undefined' ? window.location.href : ''
   const shareMessage = `${copy.shareMessage}\n\n${currentUrl}`
   const emailSubject = encodeURIComponent(copy.shareEmailSubject)
@@ -159,7 +160,7 @@ export function HeroSection({ copy, profileConfig }) {
         >
           <div className="flex items-center gap-3">
             <img
-              src="/fotos/perfil3.jpg"
+              src={`${baseUrl}fotos/perfil3.jpg`}
               alt={profileConfig.name}
               className="mb-4 h-20 w-20 rounded-full border border-slate-200 object-cover object-[center_18%] shadow-sm"
             />

@@ -3,6 +3,8 @@ import { CheckCircle2, Clock3 } from 'lucide-react'
 import { SectionShell } from './SectionShell'
 
 export function EducationSection({ copy }) {
+  const baseUrl = import.meta.env.BASE_URL
+
   return (
     <SectionShell eyebrow={copy.eyebrow} title={copy.title} description={copy.description}>
       <div className="grid gap-6 md:grid-cols-2">
@@ -21,7 +23,7 @@ export function EducationSection({ copy }) {
                 <div className="mt-4 flex items-center gap-4">
                   <div className="flex h-14 w-14 flex-none items-center justify-center rounded-2xl border border-slate-200 bg-slate-50 px-2 shadow-sm">
                     <img
-                      src={item.logo}
+                      src={`${baseUrl}${item.logo}`}
                       alt={item.institution}
                       className="max-h-9 max-w-[2.25rem] object-contain opacity-95 contrast-125 transition duration-300 group-hover:scale-[1.03]"
                     />

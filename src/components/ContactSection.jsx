@@ -1,8 +1,9 @@
 import { SectionShell } from './SectionShell'
 
 export function ContactSection({ copy, language, profileConfig }) {
+  const baseUrl = import.meta.env.BASE_URL
   const cvLabel = profileConfig.cvAvailable ? copy.cvReady : copy.cvPending
-  const cvHref = profileConfig.cvAvailable ? profileConfig.cvPath : '#contact'
+  const cvHref = profileConfig.cvAvailable ? `${baseUrl}${profileConfig.cvPath}` : '#contact'
 
   return (
     <SectionShell

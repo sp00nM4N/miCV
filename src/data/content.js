@@ -3,7 +3,7 @@
   email: 'contacto@sebastianmoya.dev',
   linkedinUrl: 'https://www.linkedin.com/in/sebastian-moya-b9942329/',
   linkedinDisplay: 'linkedin.com/in/sebastian-moya-b9942329',
-  cvPath: '/Sebastian-Moya-CV.pdf',
+  cvPath: 'pdf/Sebastian_Moya_CV.pdf',
   cvAvailable: false,
 }
 
@@ -182,7 +182,7 @@ export const content = {
           title: 'Licenciatura en Ciencia de Datos',
           institution: 'Universidad Empresarial Siglo 21',
           status: 'En curso',
-          logo: '/logos/logoues21.webp',
+          logo: 'logos/logoues21.webp',
           description:
             'Formación orientada a estadística, modelado, análisis y desarrollo de criterio cuantitativo para problemas reales.',
         },
@@ -191,7 +191,7 @@ export const content = {
           title: 'Certificación Avanzada en Data Analytics & Machine Learning',
           institution: 'ITBA Escuela de Innovación',
           status: 'Certificado',
-          logo: '/logos/ITBA-logo.png',
+          logo: 'logos/ITBA-logo.png',
           description:
             'Profundización práctica en herramientas, modelos y enfoque analítico para transformar datos en decisiones y oportunidades de mejora.',
         },
@@ -415,7 +415,7 @@ export const content = {
           title: 'B.Sc. in Data Science',
           institution: 'Universidad Empresarial Siglo 21',
           status: 'In progress',
-          logo: '/logos/logoues21.webp',
+          logo: 'logos/logoues21.webp',
           description:
             'Training focused on statistics, modeling, analytics, and quantitative judgment for real-world problems.',
         },
@@ -424,7 +424,7 @@ export const content = {
           title: 'Advanced Certification in Data Analytics & Machine Learning',
           institution: 'ITBA Innovation School',
           status: 'Certification earned',
-          logo: '/logos/ITBA-logo.png',
+          logo: 'logos/ITBA-logo.png',
           description:
             'Hands-on training in analytics, decision models, and practical frameworks to turn data into insight and action.',
         },
