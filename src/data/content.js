@@ -23,12 +23,20 @@ export const content = {
     },
     hero: {
       headlineBefore: 'Product Owner especializado en ',
-      headlineHighlight: 'optimización de operaciones, sistemas y decisiones mediante modelos de optimización',
+      headlineHighlight: 'mejora de operaciones, sistemas y decisiones mediante modelos de optimización',
       headlineAfter: ' en Oil & Gas.',
       seniorityLine:
         '22+ años en la industria, con experiencia en ingeniería de recuperación secundaria, operación en campo y evolución hacia analítica aplicada y modelos de optimización de programación de recursos.',
       subheadline:
         'Combino criterio operativo, alineación de equipos y conocimiento de sistemas para transformar procesos complejos en decisiones más claras, rápidas y escalables.',
+      impactItems: [
+        '+50% producción de gas del activo en 3 años consecutivos',
+        '+100 propuestas well repair (~80% efectividad)',
+        'Proyecto de secundaria desde 0 implementado',
+        'Operación Slickline 24hs puesta en marcha en 3 meses',
+        '+10 dashboards operativos desarrollados',
+        'Automatización de reporting (Power BI / Power Automate)',
+      ],
       ctaExperience: 'Ver experiencia',
       ctaContact: 'Contacto',
       shareCta: 'Compartir perfil',
@@ -92,7 +100,6 @@ export const content = {
             'Alineé equipos técnicos y operativos reduciendo fricción en la ejecución y mejorando la adopción de soluciones.',
             'Introduje enfoque data-driven mediante dashboards y automatización, mejorando la calidad y velocidad de decisión.',
             'Lidero en paralelo una iniciativa de optimización de programación de recursos (scheduling), mejorando la asignación y utilización de equipos mediante modelos de optimización.',
-            'Articulé equipos técnicos, operativos y de negocio para reducir fricción en la ejecución y mejorar la adopción de soluciones.',
           ],
         },
         {
@@ -141,7 +148,7 @@ export const content = {
         {
           title: 'Data & Analytics',
           caption: 'Datos',
-          items: ['Power BI', 'Data Analytics', 'Modelado analítico', 'KPIs operativos', 'Machine Learning', 'Optimization Models'],
+          items: ['Power BI', 'Data Analytics', 'Modelado analítico', 'KPIs operativos', 'Machine Learning', 'Modelos de optimización'],
         },
         {
           title: 'Product Management',
@@ -197,7 +204,7 @@ export const content = {
         {
           type: 'Certificación',
           title: 'Certificación Avanzada en Data Analytics & Machine Learning',
-          institution: 'ITBA Escuela de Innovación',
+          institution: 'ITBA Escuela de Innovación · 2025',
           status: 'Certificado',
           logo: 'logos/ITBA-logo.png',
           description:
@@ -266,12 +273,20 @@ export const content = {
     },
     hero: {
       headlineBefore: 'Product Owner specialized in ',
-      headlineHighlight: 'operations, systems, and decision optimization through optimization models',
+      headlineHighlight: 'operations, systems, and decision improvement through optimization models',
       headlineAfter: ' in Oil & Gas.',
       seniorityLine:
         '22+ years in the industry, with experience in secondary recovery engineering, field operations, and a growing focus on applied analytics and resource scheduling optimization models.',
       subheadline:
         'I combine operational judgment, team alignment, and systems knowledge to turn complex processes into clearer, faster, and more scalable decisions.',
+      impactItems: [
+        '+50% asset gas production over 3 years',
+        '+100 well repair proposals (~80% effectiveness)',
+        'Secondary recovery project implemented from scratch',
+        '24/7 Slickline operation launched in 3 months',
+        '+10 operational dashboards developed',
+        'Reporting automation (Power BI / Power Automate)',
+      ],
       ctaExperience: 'View experience',
       ctaContact: 'Contact',
       shareCta: 'Share profile',
@@ -335,7 +350,6 @@ export const content = {
             'Aligned technical and operational teams, reducing execution friction and improving solution adoption.',
             'Brought in a data-driven approach through dashboards and automation, improving decision speed and quality.',
             'I simultaneously lead a resource scheduling optimization initiative, improving team allocation and utilization through optimization models.',
-            'I brought technical, operational, and business teams together to reduce execution friction and improve solution adoption.',
           ],
         },
         {
@@ -440,7 +454,7 @@ export const content = {
         {
           type: 'Certification',
           title: 'Advanced Certification in Data Analytics & Machine Learning',
-          institution: 'ITBA Innovation School',
+          institution: 'ITBA Innovation School · 2025',
           status: 'Certification earned',
           logo: 'logos/ITBA-logo.png',
           description:

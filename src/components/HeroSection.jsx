@@ -76,6 +76,17 @@ export function HeroSection({ copy, profileConfig }) {
 
           <p className="max-w-2xl text-base leading-relaxed text-slate-600">{copy.subheadline}</p>
 
+          <div className="flex flex-wrap gap-3">
+            {copy.impactItems.map((item) => (
+              <span
+                key={item}
+                className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-ink transition hover:-translate-y-0.5 hover:border-blue-200 hover:bg-white"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+
           <div className="flex flex-col gap-4 sm:flex-row">
             <a
               className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition duration-300 hover:bg-blue-700"

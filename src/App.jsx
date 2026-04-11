@@ -53,11 +53,11 @@ function App() {
       <main id="top" className="relative z-10">
         <HeroSection copy={copy.hero} profileConfig={profileConfig} />
         <AboutSection copy={copy.about} />
-        <Experience copy={copy.experience} />
+        <FocusSection copy={copy.focus} />
         <SkillsGrid copy={copy.skills} />
+        <Experience copy={copy.experience} />
         <EvolutionSection copy={copy.evolution} />
         <EducationSection copy={copy.education} />
-        <FocusSection copy={copy.focus} />
         <ContactSection copy={copy.contact} language={language} profileConfig={profileConfig} />
       </main>
     </div>
