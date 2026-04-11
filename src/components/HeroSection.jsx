@@ -200,10 +200,6 @@ export function HeroSection({ copy, profileConfig }) {
             <p className="text-xs uppercase tracking-[0.18em] text-slate-400">{copy.positioningLabel}</p>
             <p className="mt-3 text-sm text-slate-600">{copy.positioning}</p>
           </div>
-
-          <div className="flex justify-center">
-            <span className="text-[11px] uppercase tracking-[0.22em] text-slate-500">{copy.availability}</span>
-          </div>
         </motion.aside>
       </div>
     </section>

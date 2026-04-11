@@ -1,9 +1,11 @@
+import { BarChart3, Bot, Brain, Clock3, Settings2, TrendingUp } from 'lucide-react'
 import { SectionShell } from './SectionShell'
 
 export function ContactSection({ copy, language, profileConfig }) {
   const baseUrl = import.meta.env.BASE_URL
-  const cvLabel = profileConfig.cvAvailable ? copy.cvReady : copy.cvPending
-  const cvHref = profileConfig.cvAvailable ? `${baseUrl}${profileConfig.cvPath}` : '#contact'
+  const selectedCvPath = profileConfig.cvPaths?.[language] ?? profileConfig.cvPaths?.es ?? ''
+  const cvHref = profileConfig.cvAvailable && selectedCvPath ? `${baseUrl}${selectedCvPath}` : '#contact'
+  const impactIcons = [TrendingUp, Brain, Settings2, Clock3, BarChart3, Bot]
 
   return (
     <SectionShell
@@ -26,30 +28,31 @@ export function ContactSection({ copy, language, profileConfig }) {
             <a className="btn-dark" href={profileConfig.linkedinUrl} target="_blank" rel="noreferrer">
               {copy.ctaLinkedin}
             </a>
+            <a className="btn-dark" href={cvHref} download={Boolean(profileConfig.cvAvailable && selectedCvPath)}>
+              {language === 'es' ? 'Descargar CV' : 'Download resume'}
+            </a>
           </div>
         </article>
 
         <article className="rounded-4xl border border-slate-200/80 bg-white/90 p-8 shadow-card">
           <div className="space-y-6">
             <div>
-              <p className="text-sm font-medium text-muted">{copy.emailLabel}</p>
-              <a className="mt-2 inline-block text-lg font-semibold text-ink hover:text-accent" href={`mailto:${profileConfig.email}`}>
-                {profileConfig.email}
-              </a>
+              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent">{copy.impactLabel}</p>
+              <h3 className="mt-3 text-2xl font-semibold text-ink">{copy.impactTitle}</h3>
             </div>
-            <div>
-              <p className="text-sm font-medium text-muted">{copy.linkedinLabel}</p>
-              <a className="mt-2 inline-block text-lg font-semibold text-ink hover:text-accent" href={profileConfig.linkedinUrl} target="_blank" rel="noreferrer">
-                {profileConfig.linkedinDisplay}
-              </a>
-            </div>
-            <div>
-              <p className="text-sm font-medium text-muted">{copy.cvLabel}</p>
-              <a className="mt-2 inline-flex items-center gap-2 text-lg font-semibold text-ink hover:text-accent" href={cvHref} download={Boolean(profileConfig.cvAvailable)}>
-                {language === 'es' ? 'Descargar CV' : 'Download resume'}
-              </a>
-              <p className="mt-2 text-sm leading-6 text-muted">{cvLabel}</p>
-            </div>
+
+            <ul className="space-y-4">
+              {copy.impactItems.map((item, index) => {
+                const Icon = impactIcons[index] ?? TrendingUp
+
+                return (
+                  <li key={item} className="flex items-start gap-2">
+                    <Icon className="mt-0.5 h-4 w-4 flex-none text-slate-400" strokeWidth={1.9} />
+                    <span className="text-sm leading-6 text-slate-600">{item}</span>
+                  </li>
+                )
+              })}
+            </ul>
           </div>
         </article>
       </div>

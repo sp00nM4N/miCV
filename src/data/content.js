@@ -1,10 +1,13 @@
 ﻿export const profileConfig = {
   name: 'Sebastian Moya',
-  email: 'contacto@sebastianmoya.dev',
-  linkedinUrl: 'https://www.linkedin.com/in/sebastian-moya-b9942329/',
-  linkedinDisplay: 'linkedin.com/in/sebastian-moya-b9942329',
-  cvPath: 'pdf/Sebastian_Moya_CV.pdf',
-  cvAvailable: false,
+  email: 'sebastian.moya@gmail.com',
+  linkedinUrl: 'https://www.linkedin.com/in/sebastian-moya-cr/',
+  linkedinDisplay: 'linkedin.com/in/sebastian-moya-cr',
+  cvPaths: {
+    es: 'pdf/Sebastian Moya-ES.pdf',
+    en: 'pdf/Sebastian Moya-EN.pdf',
+  },
+  cvAvailable: true,
 }
 
 export const content = {
@@ -20,12 +23,12 @@ export const content = {
     },
     hero: {
       headlineBefore: 'Product Owner especializado en ',
-      headlineHighlight: 'optimización de operaciones',
-      headlineAfter: ' y sistemas en Oil & Gas.',
+      headlineHighlight: 'optimización de operaciones, sistemas y decisiones mediante modelos de optimización',
+      headlineAfter: ' en Oil & Gas.',
       seniorityLine:
-        '22+ años en la industria, con experiencia en ingeniería de recuperación secundaria, operación en campo y evolución hacia analítica aplicada.',
+        '22+ años en la industria, con experiencia en ingeniería de recuperación secundaria, operación en campo y evolución hacia analítica aplicada y modelos de optimización de programación de recursos.',
       subheadline:
-        'Combino criterio operativo, conocimiento de sistemas y mentalidad de producto para transformar procesos complejos en decisiones más claras, rápidas y escalables.',
+        'Combino criterio operativo, alineación de equipos y conocimiento de sistemas para transformar procesos complejos en decisiones más claras, rápidas y escalables.',
       ctaExperience: 'Ver experiencia',
       ctaContact: 'Contacto',
       shareCta: 'Compartir perfil',
@@ -41,7 +44,7 @@ export const content = {
       },
       panelTitle: 'Resumen profesional',
       currentRoleLabel: 'Rol actual',
-      currentRole: 'Product Owner SAP PM',
+      currentRole: 'Product Owner | SAP PM & Scheduling Optimization',
       domainLabel: 'Dominio',
       domain: 'Oil & Gas, operaciones y sistemas',
       contributionLabel: 'Lo que aporto',
@@ -50,6 +53,8 @@ export const content = {
         'Alineo negocio, usuarios y tecnología',
         'Priorizo con foco en continuidad, adopción y valor',
         'Incorporo analítica para mejorar calidad de decisión',
+        'Diseño criterios de optimización para asignación eficiente de recursos',
+        'Alineo equipos técnicos y de negocio para ejecutar con foco y coherencia',
       ],
       evolutionFocusLabel: 'Foco de evolución',
       evolutionFocus: 'Data Analytics & Machine Learning',
@@ -65,8 +70,8 @@ export const content = {
         'Experiencia combinando operación, sistemas y producto para mejorar la forma en que los equipos planifican, priorizan y ejecutan.',
       highlights: [
         'Lidero soluciones que conectan necesidades operativas con procesos SAP y lógica de producto.',
-        'Traduzco complejidad técnica en decisiones ejecutables, con foco en continuidad operativa y eficiencia.',
-        'Aporto criterio de campo y entendimiento de ingeniería para priorizar con contexto real, no teórico.',
+        'Traduzco complejidad técnica en decisiones ejecutables, incorporando criterios de optimización en la asignación de recursos.',
+        'Alineo equipos técnicos, operativos y de negocio para ejecutar con foco en valor, continuidad operativa y eficiencia.',
         'Estoy evolucionando hacia un enfoque cada vez más data-driven, con formación activa en analytics y machine learning.',
       ],
     },
@@ -86,6 +91,8 @@ export const content = {
             'Incorporé criterios de priorización basados en impacto operativo, mejorando la consistencia en la toma de decisiones.',
             'Alineé equipos técnicos y operativos reduciendo fricción en la ejecución y mejorando la adopción de soluciones.',
             'Introduje enfoque data-driven mediante dashboards y automatización, mejorando la calidad y velocidad de decisión.',
+            'Lidero en paralelo una iniciativa de optimización de programación de recursos (scheduling), mejorando la asignación y utilización de equipos mediante modelos de optimización.',
+            'Articulé equipos técnicos, operativos y de negocio para reducir fricción en la ejecución y mejorar la adopción de soluciones.',
           ],
         },
         {
@@ -134,7 +141,7 @@ export const content = {
         {
           title: 'Data & Analytics',
           caption: 'Datos',
-          items: ['Power BI', 'Data Analytics', 'Modelado analítico', 'KPIs operativos', 'Machine Learning'],
+          items: ['Power BI', 'Data Analytics', 'Modelado analítico', 'KPIs operativos', 'Machine Learning', 'Optimization Models'],
         },
         {
           title: 'Product Management',
@@ -166,8 +173,9 @@ export const content = {
         },
         {
           eyebrow: 'Data',
-          title: 'Enfoque data-driven',
-          description: 'Hoy amplío esa base con analítica y ciencia de datos para tomar decisiones más precisas y escalables.',
+          title: 'Enfoque en analítica y optimización',
+          description:
+            'Hoy amplío esa base con analítica, modelos de optimización y toma de decisiones basada en datos para mejorar eficiencia operativa.',
         },
       ],
     },
@@ -211,9 +219,9 @@ export const content = {
         },
         {
           kicker: 'Scheduling',
-          title: 'Priorización estratégica de backlog',
+          title: 'Optimización de programación de recursos',
           description:
-            'Ordeno iniciativas según impacto operativo, valor de negocio y viabilidad para sostener foco y velocidad de entrega.',
+            'Conecto operación, negocio y tecnología para alinear decisiones y ejecución en contextos complejos.',
         },
         {
           kicker: 'Analytics',
@@ -227,18 +235,23 @@ export const content = {
       eyebrow: 'Contacto',
       title: 'Construyamos soluciones donde operación, producto y datos tengan que convivir.',
       description:
-        'Disponible para conversaciones sobre roles de Product Owner, transformación operativa y entornos donde el contexto técnico haga la diferencia.',
+        'Disponible para conversaciones sobre roles de Product Owner, optimización operativa y entornos donde alinear equipos sea clave para ejecutar decisiones complejas.',
       primaryLabel: 'Próximo paso',
       primaryHeadline: 'Un perfil pensado para equipos que necesitan criterio, estructura y ejecución.',
       primaryBody:
         'Si tu desafío requiere conectar operaciones complejas, sistemas y decisiones más inteligentes, conversemos.',
       ctaEmail: 'Enviar email',
       ctaLinkedin: 'Ver LinkedIn',
-      emailLabel: 'Email',
-      linkedinLabel: 'LinkedIn',
-      cvLabel: 'CV',
-      cvReady: 'El enlace está listo para descargar una vez que agregues el PDF en /public.',
-      cvPending: 'El botón ya está integrado; sólo falta sumar el PDF definitivo para habilitar la descarga.',
+      impactLabel: 'Impacto',
+      impactTitle: 'Impacto en operación',
+      impactItems: [
+        '+50% producción de gas del activo en 3 años consecutivos',
+        '+100 propuestas well repair (~80% efectividad)',
+        'Proyecto de secundaria desde 0 implementado',
+        'Operación Slickline 24hs puesta en marcha en 3 meses',
+        '+10 dashboards operativos desarrollados',
+        'Automatización de reporting (Power BI / Power Automate)',
+      ],
     },
   },
   en: {
@@ -253,12 +266,12 @@ export const content = {
     },
     hero: {
       headlineBefore: 'Product Owner specialized in ',
-      headlineHighlight: 'operations optimization',
-      headlineAfter: ' and systems in Oil & Gas.',
+      headlineHighlight: 'operations, systems, and decision optimization through optimization models',
+      headlineAfter: ' in Oil & Gas.',
       seniorityLine:
-        '22+ years in the industry, with experience in secondary recovery engineering, field operations, and a growing focus on applied analytics.',
+        '22+ years in the industry, with experience in secondary recovery engineering, field operations, and a growing focus on applied analytics and resource scheduling optimization models.',
       subheadline:
-        'I combine operational judgment, systems knowledge, and a product mindset to turn complex processes into clearer, faster, and more scalable decisions.',
+        'I combine operational judgment, team alignment, and systems knowledge to turn complex processes into clearer, faster, and more scalable decisions.',
       ctaExperience: 'View experience',
       ctaContact: 'Contact',
       shareCta: 'Share profile',
@@ -274,7 +287,7 @@ export const content = {
       },
       panelTitle: 'Professional summary',
       currentRoleLabel: 'Current role',
-      currentRole: 'SAP PM Product Owner',
+      currentRole: 'Product Owner | SAP PM & Scheduling Optimization',
       domainLabel: 'Domain',
       domain: 'Oil & Gas, operations, and systems',
       contributionLabel: 'What I bring',
@@ -283,6 +296,8 @@ export const content = {
         'I align business, users, and technology',
         'I prioritize with continuity, adoption, and value in mind',
         'I bring analytics into the decision-making process',
+        'I design optimization criteria for efficient resource allocation',
+        'I align technical and business teams to execute with focus and coherence',
       ],
       evolutionFocusLabel: 'Evolution focus',
       evolutionFocus: 'Data Analytics & Machine Learning',
@@ -298,8 +313,8 @@ export const content = {
         'Experience across operations, systems, and product that improves how teams plan, prioritize, and execute.',
       highlights: [
         'I lead solutions that connect operational needs with SAP processes and product logic.',
-        'I translate technical complexity into executable decisions with a focus on continuity and efficiency.',
-        'I bring field context and engineering understanding to prioritization, not just system abstraction.',
+        'I translate technical complexity into executable decisions, incorporating optimization criteria into resource allocation.',
+        'I align technical, operational, and business teams to execute with value, operational continuity, and efficiency in mind.',
         'I am expanding into a more data-driven approach through active training in analytics and machine learning.',
       ],
     },
@@ -319,6 +334,8 @@ export const content = {
             'Introduced prioritization criteria based on operational impact, improving consistency in decision making.',
             'Aligned technical and operational teams, reducing execution friction and improving solution adoption.',
             'Brought in a data-driven approach through dashboards and automation, improving decision speed and quality.',
+            'I simultaneously lead a resource scheduling optimization initiative, improving team allocation and utilization through optimization models.',
+            'I brought technical, operational, and business teams together to reduce execution friction and improve solution adoption.',
           ],
         },
         {
@@ -367,7 +384,7 @@ export const content = {
         {
           title: 'Data & Analytics',
           caption: 'Data',
-          items: ['Power BI', 'Data Analytics', 'Analytical modeling', 'Operational KPIs', 'Machine Learning'],
+          items: ['Power BI', 'Data Analytics', 'Analytical modeling', 'Operational KPIs', 'Machine Learning', 'Optimization Models'],
         },
         {
           title: 'Product Management',
@@ -399,8 +416,9 @@ export const content = {
         },
         {
           eyebrow: 'Data',
-          title: 'Data-driven approach',
-          description: 'I am now expanding that foundation with analytics and data science to make decisions more precise and scalable.',
+          title: 'Analytics and optimization focus',
+          description:
+            'I am now expanding that foundation with analytics, optimization models, and data-driven decision making to improve operational efficiency.',
         },
       ],
     },
@@ -444,9 +462,9 @@ export const content = {
         },
         {
           kicker: 'Scheduling',
-          title: 'Strategic backlog prioritization',
+          title: 'Resource scheduling optimization',
           description:
-            'I organize initiatives by operational impact, business value, and feasibility to maintain focus and delivery speed.',
+            'I connect operations, business, and technology to align decisions and execution in complex environments.',
         },
         {
           kicker: 'Analytics',
@@ -460,19 +478,23 @@ export const content = {
       eyebrow: 'Contact',
       title: 'Let’s build solutions where operations, product, and data must work together.',
       description:
-        'Available for conversations around Product Owner roles, operational transformation, and environments where technical context is a strategic advantage.',
+        'Available for conversations around Product Owner roles, operational optimization, and environments where team alignment is key to executing complex decisions.',
       primaryLabel: 'Next move',
       primaryHeadline: 'A profile built for teams that need judgment, structure, and execution.',
       primaryBody:
         'If your challenge requires connecting complex operations, systems, and smarter decisions, I would be glad to connect.',
       ctaEmail: 'Send email',
       ctaLinkedin: 'Open LinkedIn',
-      emailLabel: 'Email',
-      linkedinLabel: 'LinkedIn',
-      cvLabel: 'Resume',
-      cvReady: 'The link will download correctly once the final PDF is added under /public.',
-      cvPending: 'The button is already wired; only the final PDF is missing to enable the download.',
+      impactLabel: 'Impact',
+      impactTitle: 'Operational impact',
+      impactItems: [
+        '+50% asset gas production over 3 years',
+        '+100 well repair proposals (~80% effectiveness)',
+        'Secondary recovery project implemented from scratch',
+        '24/7 Slickline operation launched in 3 months',
+        '+10 operational dashboards developed',
+        'Reporting automation (Power BI / Power Automate)',
+      ],
     },
   },
 }
-
