@@ -21,6 +21,66 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+  // Clic en "Ver experiencia"
+  document.querySelector('a[href="#experience"], button[data-section="experience"]')
+    ?.addEventListener('click', () => {
+      gtag('event', 'clic_ver_experiencia', { section: 'hero' });
+    });
+
+  // Clic en "Contacto"
+  document.querySelectorAll('a[href="#contact"], button[data-section="contact"]')
+    .forEach(el => el.addEventListener('click', () => {
+      gtag('event', 'clic_contacto', { section: 'hero' });
+    }));
+
+  // Clic en "Compartir perfil"
+  document.querySelector('[data-action="share"]')
+    ?.addEventListener('click', () => {
+      gtag('event', 'clic_compartir_perfil');
+    });
+
+  // Clic en "Descargar CV"
+  document.querySelector('[data-action="download-cv"], a[href*="CV"]')
+    ?.addEventListener('click', () => {
+      gtag('event', 'descarga_cv');
+    });
+
+  // Clic en "Ver LinkedIn"
+  document.querySelector('a[href*="linkedin"]')
+    ?.addEventListener('click', () => {
+      gtag('event', 'clic_linkedin');
+    });
+
+  // Clic en "Enviar email"
+  document.querySelector('a[href^="mailto"]')
+    ?.addEventListener('click', () => {
+      gtag('event', 'clic_email');
+    });
+
+  // Scroll depth — cuánto llega a leer cada visitante
+  const sections = ['experience', 'skills', 'evolution', 'focus', 'training', 'contact'];
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        gtag('event', 'seccion_visible', { section: entry.target.id });
+        observer.unobserve(entry.target); // solo una vez por sesión
+      }
+    });
+  }, { threshold: 0.3 });
+
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) observer.observe(el);
+  });
+
+  // Cambio de idioma ES/EN
+  document.querySelectorAll('[data-lang]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      gtag('event', 'cambio_idioma', { idioma: btn.dataset.lang });
+    });
+  });
+</script>
   </body>
   </html>
 
