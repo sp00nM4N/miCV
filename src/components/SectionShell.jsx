@@ -1,9 +1,18 @@
 import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
+import { trackSectionView } from '../lib/analytics'
 
 export function SectionShell({ id, eyebrow, title, description, children, className = '' }) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-80px' })
+
+  useEffect(() => {
+    if (!isInView || !id) {
+      return
+    }
+
+    trackSectionView(id)
+  }, [id, isInView])
 
   return (
     <section id={id} ref={ref} className={`mx-auto max-w-6xl px-6 py-16 lg:px-8 lg:py-24 ${className}`}>

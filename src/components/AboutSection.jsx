@@ -2,7 +2,7 @@ import { SectionShell } from './SectionShell'
 
 export function AboutSection({ copy }) {
   return (
-    <SectionShell eyebrow={copy.eyebrow} title={copy.title} description={copy.description}>
+    <SectionShell id="about" eyebrow={copy.eyebrow} title={copy.title} description={copy.description}>
       <div className="grid gap-4 md:grid-cols-2">
         {copy.highlights.map((item) => (
           <article

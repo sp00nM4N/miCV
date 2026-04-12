@@ -10,6 +10,7 @@ import {
   SkillsGrid,
 } from './components'
 import { LanguageToggle } from './components/LanguageToggle'
+import { trackEvent } from './lib/analytics'
 import { content, profileConfig } from './data/content'
 
 const sectionIds = ['experience', 'skills', 'evolution', 'contact']
@@ -17,6 +18,15 @@ const sectionIds = ['experience', 'skills', 'evolution', 'contact']
 function App() {
   const [language, setLanguage] = useState('es')
   const copy = content[language]
+
+  function handleLanguageChange(nextLanguage) {
+    if (nextLanguage === language) {
+      return
+    }
+
+    setLanguage(nextLanguage)
+    trackEvent('cambio_idioma', { idioma: nextLanguage })
+  }
 
   useEffect(() => {
     document.documentElement.lang = language
@@ -45,7 +55,7 @@ function App() {
                 </a>
               ))}
             </nav>
-            <LanguageToggle language={language} onChange={setLanguage} />
+            <LanguageToggle language={language} onChange={handleLanguageChange} />
           </div>
         </div>
       </header>

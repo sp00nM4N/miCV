@@ -6,7 +6,7 @@ export function EducationSection({ copy }) {
   const baseUrl = import.meta.env.BASE_URL
 
   return (
-    <SectionShell eyebrow={copy.eyebrow} title={copy.title} description={copy.description}>
+    <SectionShell id="training" eyebrow={copy.eyebrow} title={copy.title} description={copy.description}>
       <div className="grid gap-6 md:grid-cols-2">
         {copy.items.map((item, index) => (
           <motion.article

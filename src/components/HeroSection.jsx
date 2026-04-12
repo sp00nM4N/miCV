@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Copy, Linkedin, Mail, MessageCircle, Share2 } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
+import { trackEvent } from '../lib/analytics'
 
 export function HeroSection({ copy, profileConfig }) {
   const [shareOpen, setShareOpen] = useState(false)
@@ -48,6 +49,7 @@ export function HeroSection({ copy, profileConfig }) {
   async function handleCopyLink() {
     try {
       await navigator.clipboard.writeText(currentUrl)
+      trackEvent('compartir_perfil', { channel: 'copy_link', section: 'hero' })
       setCopied(true)
       setShareOpen(false)
     } catch {
@@ -91,12 +93,14 @@ export function HeroSection({ copy, profileConfig }) {
             <a
               className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition duration-300 hover:bg-blue-700"
               href="#experience"
+              onClick={() => trackEvent('clic_ver_experiencia', { section: 'hero' })}
             >
               {copy.ctaExperience}
             </a>
             <a
               className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition duration-300 hover:border-slate-300 hover:bg-slate-50"
               href="#contact"
+              onClick={() => trackEvent('clic_contacto', { section: 'hero' })}
             >
               {copy.ctaContact}
             </a>
@@ -106,7 +110,10 @@ export function HeroSection({ copy, profileConfig }) {
                 aria-label={copy.shareCta}
                 aria-expanded={shareOpen}
                 aria-haspopup="menu"
-                onClick={() => setShareOpen((open) => !open)}
+                onClick={() => {
+                  trackEvent('clic_compartir_perfil', { section: 'hero' })
+                  setShareOpen((open) => !open)
+                }}
                 className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 px-4 py-2 text-sm text-slate-600 transition-colors hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
               >
                 <Share2 size={16} />
@@ -130,6 +137,7 @@ export function HeroSection({ copy, profileConfig }) {
                     href={whatsappUrl}
                     target="_blank"
                     rel="noreferrer"
+                    onClick={() => trackEvent('compartir_perfil', { channel: 'whatsapp', section: 'hero' })}
                     className="flex w-full items-center gap-3 rounded-lg px-3 py-2 text-sm text-slate-600 transition hover:bg-slate-50 hover:text-slate-900"
                   >
                     <MessageCircle size={16} />
@@ -137,6 +145,7 @@ export function HeroSection({ copy, profileConfig }) {
                   </a>
                   <a
                     href={`mailto:?subject=${emailSubject}&body=${emailBody}`}
+                    onClick={() => trackEvent('clic_email', { section: 'share_menu', channel: 'email' })}
                     className="flex w-full items-center gap-3 rounded-lg px-3 py-2 text-sm text-slate-600 transition hover:bg-slate-50 hover:text-slate-900"
                   >
                     <Mail size={16} />
@@ -146,6 +155,7 @@ export function HeroSection({ copy, profileConfig }) {
                     href={linkedinUrl}
                     target="_blank"
                     rel="noreferrer"
+                    onClick={() => trackEvent('compartir_perfil', { channel: 'linkedin', section: 'hero' })}
                     className="flex w-full items-center gap-3 rounded-lg px-3 py-2 text-sm text-slate-600 transition hover:bg-slate-50 hover:text-slate-900"
                   >
                     <Linkedin size={16} />

@@ -1,4 +1,5 @@
 import { BarChart3, Bot, Brain, Clock3, Settings2, TrendingUp } from 'lucide-react'
+import { trackEvent } from '../lib/analytics'
 import { SectionShell } from './SectionShell'
 
 export function ContactSection({ copy, language, profileConfig }) {
@@ -22,13 +23,28 @@ export function ContactSection({ copy, language, profileConfig }) {
           <p className="mt-4 max-w-xl text-base leading-8 text-slate-300">{copy.primaryBody}</p>
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <a className="btn-light" href={`mailto:${profileConfig.email}`}>
+            <a
+              className="btn-light"
+              href={`mailto:${profileConfig.email}`}
+              onClick={() => trackEvent('clic_email', { section: 'contact' })}
+            >
               {copy.ctaEmail}
             </a>
-            <a className="btn-dark" href={profileConfig.linkedinUrl} target="_blank" rel="noreferrer">
+            <a
+              className="btn-dark"
+              href={profileConfig.linkedinUrl}
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => trackEvent('clic_linkedin', { section: 'contact' })}
+            >
               {copy.ctaLinkedin}
             </a>
-            <a className="btn-dark" href={cvHref} download={Boolean(profileConfig.cvAvailable && selectedCvPath)}>
+            <a
+              className="btn-dark"
+              href={cvHref}
+              download={Boolean(profileConfig.cvAvailable && selectedCvPath)}
+              onClick={() => trackEvent('descarga_cv', { idioma: language })}
+            >
               {language === 'es' ? 'Descargar CV' : 'Download resume'}
             </a>
           </div>
