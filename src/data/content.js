@@ -26,13 +26,13 @@ export const content = {
       headlineHighlight: 'mejora de operaciones, sistemas y decisiones mediante modelos de optimización',
       headlineAfter: ' en Oil & Gas.',
       seniorityLine:
-        '22+ años en la industria, con experiencia en ingeniería de recuperación secundaria, operación en campo y evolución hacia analítica aplicada y modelos de optimización de programación de recursos.',
+        '+20 años en la industria, con experiencia en ingeniería de recuperación secundaria, operación en campo y evolución hacia analítica aplicada y modelos de optimización de programación de recursos.',
       subheadline:
         'Combino criterio operativo, alineación de equipos y conocimiento de sistemas para transformar procesos complejos en decisiones más claras, rápidas y escalables.',
       impactItems: [
         '+50% producción de gas del activo en 3 años consecutivos',
         '+100 propuestas well repair (~80% efectividad)',
-        'Proyecto de secundaria desde 0 implementado',
+        'Implementación de proyecto de secundaria desde 0',
         'Operación Slickline 24hs puesta en marcha en 3 meses',
         '+10 dashboards operativos desarrollados',
         'Automatización de reporting (Power BI / Power Automate)',
@@ -166,7 +166,7 @@ export const content = {
         {
           eyebrow: 'Operación',
           title: 'Fundamentos en operación',
-          description: 'Construí criterio desde el campo, entendiendo cómo se ejecuta, dónde se traba y qué impacto tiene cada decisión.',
+          description: 'Construí criterio desde las operaciones de campo, entendiendo cómo se ejecutan, dónde estan las oportunidades y qué impacto tiene cada decisión.',
         },
         {
           eyebrow: 'Sistemas',
@@ -240,7 +240,7 @@ export const content = {
     },
     contact: {
       eyebrow: 'Contacto',
-      title: 'Construyamos soluciones donde operación, producto y datos tengan que convivir.',
+      title: 'Construyamos soluciones donde operación, producto y datos convivan virtuosamente.',
       description:
         'Disponible para conversaciones sobre roles de Product Owner, optimización operativa y entornos donde alinear equipos sea clave para ejecutar decisiones complejas.',
       primaryLabel: 'Próximo paso',
@@ -254,7 +254,7 @@ export const content = {
       impactItems: [
         '+50% producción de gas del activo en 3 años consecutivos',
         '+100 propuestas well repair (~80% efectividad)',
-        'Proyecto de secundaria desde 0 implementado',
+        'Implementación de proyecto de secundaria desde 0',
         'Operación Slickline 24hs puesta en marcha en 3 meses',
         '+10 dashboards operativos desarrollados',
         'Automatización de reporting (Power BI / Power Automate)',
@@ -276,7 +276,7 @@ export const content = {
       headlineHighlight: 'operations, systems, and decision improvement through optimization models',
       headlineAfter: ' in Oil & Gas.',
       seniorityLine:
-        '22+ years in the industry, with experience in secondary recovery engineering, field operations, and a growing focus on applied analytics and resource scheduling optimization models.',
+        '+20 years in the industry, with experience in secondary recovery engineering, field operations, and a growing focus on applied analytics and resource scheduling optimization models.',
       subheadline:
         'I combine operational judgment, team alignment, and systems knowledge to turn complex processes into clearer, faster, and more scalable decisions.',
       impactItems: [
